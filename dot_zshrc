@@ -129,6 +129,8 @@ export PATH="$PATH:/Users/jordi/Dev/Infra/terraform-infra/"
 # Example aliases
 alias r="ranger"
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+eval $(thefuck --alias)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # Options 
