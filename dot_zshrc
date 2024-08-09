@@ -146,6 +146,9 @@ eval $(thefuck --alias)
 
 #bat alias
 alias cat='bat --theme=base16'
+
+#z alias
+alias cd='z'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # Options 
