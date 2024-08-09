@@ -143,6 +143,9 @@ alias lS='eza -1'
 alias lt='eza --tree --level=2'
 alias l.="eza -a | grep -E '^\.'"
 eval $(thefuck --alias)
+
+#bat alias
+alias cat='bat --theme=base16'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # Options 
