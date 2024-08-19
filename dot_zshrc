@@ -102,7 +102,7 @@ if [ -f '/Users/jordi/Dev/General/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jordi/Dev/General/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jordi/Dev/General/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="$PATH:/Users/jordi/Dev/General/google-cloud-sdk/bin/gcloud"
-export PATH="$PATH:/Users/jordi/Dev/Infra/terraform-infra/"
+export PATH="$PATH:/Users/jordi/Dev/General/voictl"
 
 # User configuration
 
