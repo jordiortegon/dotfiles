@@ -136,6 +136,8 @@ alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
 # eza alias
 alias ls='eza'
 alias l='eza -lbF --git'
+alias tf='terraform'
+alias k='kubectl'
 alias ll='eza -lbGF --git'
 alias llm='eza -lbGd --git --sort=modified'
 alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
