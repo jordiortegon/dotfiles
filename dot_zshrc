@@ -78,7 +78,6 @@ plugins=(git github zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete
 source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
-source /Users/jordi/.config/broot/launcher/bash/br
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
