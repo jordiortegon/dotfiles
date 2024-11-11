@@ -138,6 +138,10 @@ alias cat='bat --theme=base16'
 #z alias
 alias cd='z'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#lazygit alias
+alias lg='lazygit'
+
 #
 # Options 
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -694,4 +698,28 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 ### end: completion.zsh ###
 
 
-export DEVBOX_USE_VERSION=0.12.0
+export DEVBOX_USE_VERSION=0.13.1
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/jordiortegon/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+alias devbox="GITHUB_TOKEN=$(gh auth token) devbox"
+
+# zsh natural text edit
+# <<<<< Enable natural text editing
+#
+# Move to the beginning of the line. `Cmd + Left Arrow`:
+bindkey "^[[1;9D" beginning-of-line
+# Move to the end of the line. `Cmd + Right Arrow`:
+bindkey "^[[1;9C" end-of-line
+# Move to the beginning of the previous word. `Option + Left Arrow`:
+bindkey "^[[1;3D" backward-word
+# Move to the beginning of the next word. `Option + Right Arrow`:
+bindkey "^[[1;3C" forward-word
+# Delete the word behind the cursor. `Option + Delete`:
+bindkey "^[[3;10~" backward-kill-word
+# Delete the word after the cursor. `Option + fn + Delete`:
+bindkey "^[[3;3~" kill-word
+#
+# Enable natural text editing >>>>>
