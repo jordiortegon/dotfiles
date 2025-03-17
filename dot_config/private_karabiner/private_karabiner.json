@@ -126,15 +126,27 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Open Spotify",
+                                "description": "Open Ticktick",
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "t",
                                     "modifiers": {
                                         "mandatory": ["command", "control"],
                                         "optional": ["caps_lock"]
                                     }
                                 },
-                                "to": [{ "shell_command": "open -a \"Spotify\"" }],
+                                "to": [{ "shell_command": "open -a \"TickTick\"" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Open Ticktick",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": ["command", "control"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "open -a \"Notion\"" }],
                                 "type": "basic"
                             }
                         ]
