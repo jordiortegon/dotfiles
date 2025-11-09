@@ -1,0 +1,9 @@
+os:
+  gui.switchTabsWithPanelJumpKeys: true
+  editPreset: "vscode"
+  openPreset: "vscode"
+gui:
+  screenMode: "half"
+  switchTabsWithPanelJumpKeys: true
+
+notARepository: skip
