@@ -1,0 +1,7 @@
+[flavor]
+dark = "kanagawa"
+#light = "catppuccin-macchiato" 
+#use =  "catppuccin-macchiato"
+
+[mgr]
+border_symbol = " "
