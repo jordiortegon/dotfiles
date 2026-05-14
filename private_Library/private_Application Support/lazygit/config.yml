@@ -1,7 +1,7 @@
 os:
   gui.switchTabsWithPanelJumpKeys: true
-  editPreset: "vscode"
-  openPreset: "vscode"
+  editPreset: "nvim"
+  openPreset: "nvim"
 gui:
   screenMode: "half"
   switchTabsWithPanelJumpKeys: true
