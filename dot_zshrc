@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+DISABLE_AUTO_UPDATE="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_COMPFIX="true"
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -75,14 +79,6 @@ zstyle ':omz:update' mode auto
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git github zsh-autosuggestions zsh-syntax-highlighting fzf-tab) 
 
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
@@ -121,7 +117,6 @@ export PATH="$PATH:/Users/jordiortegon/Dev/General/"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias r="ranger"
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
 alias n="nvim ."
 alias c="code ." 
@@ -140,7 +135,6 @@ alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
 alias lS='eza -1'
 alias lt='eza --tree --level=2'
 alias l.="eza -a | grep -E '^\.'"
-eval $(thefuck --alias)
 
 #bat alias
 alias cat='bat --theme=base16'
@@ -151,20 +145,6 @@ alias cd='z'
 
 #lazygit alias
 alias lg='lazygit'
-
-#fzf ripgrep alias
-f() {
-  RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case"
-  INITIAL_QUERY="${*:-}"
-  fzf --ansi --disabled --query "$INITIAL_QUERY" \
-    --bind "start:reload:$RG_PREFIX {q}" \
-    --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
-    --delimiter : \
-    --preview 'bat --color=always {1} --highlight-line {2}' \
-    --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-    --bind 'enter:become(code {1} +{2})'
-}
-alias f='f'
 
 # Options 
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -240,3 +220,15 @@ zstyle ':fzf-tab:*' use-fzf-default-opts yes
 . "$HOME/.cargo/env" 
 
 source <(kubectl completion zsh)
+
+source <(fzf --zsh)
+
+# Smarter completion initialization
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
+
+eval "$(atuin init zsh)"
