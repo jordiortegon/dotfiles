@@ -50,3 +50,4 @@
 theme = Ayu Mirage
 font-size = 14.5
 window-decoration = false
+desktop-notifications = true
